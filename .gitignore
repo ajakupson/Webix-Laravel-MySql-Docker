@@ -1,0 +1,74 @@
+# ---------------------------------------
+# Laravel backend
+# ---------------------------------------
+
+/vendor/
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel environment
+/.env
+/.env.*
+!/.env.example
+
+# Laravel logs
+/storage/*.key
+/storage/app/public/*
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*.log
+
+# Cache
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+
+# Compiled files
+/bootstrap/cache/*.php
+/public/storage
+
+# ---------------------------------------
+# Frontend (Webix static)
+# ---------------------------------------
+
+frontend/app/node_modules/
+frontend/app/*.log
+frontend/app/npm-debug.log
+
+# ---------------------------------------
+# OS / Editor files
+# ---------------------------------------
+
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+
+# VSCode
+.vscode/
+.idea/
+
+# ---------------------------------------
+# Docker / Build artifacts
+# ---------------------------------------
+
+/docker/*/tmp
+/.docker
+/.env.docker.local
+docker-compose.override.yml
+*.pid
+
+# Images created by containers
+**/public/storage/*
+**/public/nonconformity_files/*
+
+# ---------------------------------------
+# Optional: ignore local backups
+# ---------------------------------------
+
+*.bak
+*.old
+*.orig
+*.save
