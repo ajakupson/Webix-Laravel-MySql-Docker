@@ -30,7 +30,8 @@ Eeldused: Docker + Docker Compose.
 
 1. Kloneeri projekt
    ```bash
-   git clone <repo>
+   git clone https://github.com/ajakupson/Webix-Laravel-MySql-Docker.git
+   ```
    cd MetaPrint
 2. Sea backend keskkond
    ```
@@ -66,26 +67,21 @@ docker compose exec backend php artisan db:seed
 1. Mine backend kataloogi
    ```
    cd backend
-   
 2. Paigalda sõltuvused
    ```
    composer install
    php artisan key:generate
-
 3. Loo .env ja seadista MySQL ühendus
 4. Loo tabelid ja storage link
    ```
    php artisan migrate
    php artisan storage:link
-   
 5. Käivita Laravel dev-server
    ```
    php artisan serve --host=0.0.0.0 --port=8000
-   
 6. Seederid on ühendatud DatabaseSeeder kaudu ning käivitatakse automaatselt
    ```
    php artisan db:seed
-
 ### Frontend
 
 Frontend on staatiline, vajab ainult lihtsat serverit.
