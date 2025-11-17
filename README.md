@@ -32,7 +32,8 @@ Eeldused: Docker + Docker Compose.
    ```bash
    git clone https://github.com/ajakupson/Webix-Laravel-MySql-Docker.git
    ```
-   cd MetaPrint
+   ```
+   cd Webix-Laravel-MySql-Docker
 2. Sea backend keskkond
    ```
    cp backend/.env.example backend/.env
