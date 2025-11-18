@@ -39,6 +39,7 @@ Eeldused: Docker + Docker Compose.
    cp backend/.env.example backend/.env
 3. Käivita
    ```
+   docker compose build
    docker compose up
 4. Loo andmebaasi tabelid
    ```
@@ -71,8 +72,21 @@ docker compose exec backend php artisan db:seed
 2. Paigalda sõltuvused
    ```
    composer install
-   php artisan key:generate
 3. Loo .env ja seadista MySQL ühendus
+   ```
+   cp .env.example .env
+   
+   APP_URL=http://localhost:8000
+
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database
+   DB_USERNAME=your_user
+   DB_PASSWORD=your_pass
+   
+   php artisan key:generate
+   ```
 4. Loo tabelid ja storage link
    ```
    php artisan migrate
