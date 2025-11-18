@@ -39,15 +39,16 @@ Eeldused: Docker + Docker Compose.
    cp backend/.env.example backend/.env
 3. Käivita
    ```
+   cd backend
    composer install
    docker compose build
 4. Loo andmebaasi tabelid
    ```
+   docker compose up -d
    docker compose exec backend php artisan migrate
    docker compose exec backend php artisan storage:link
 5. Ava rakendus
    ```
-   docker compose up
    Frontend: http://localhost:8080
    API: http://localhost:8000/api/nonconformity
 ### Demoandmete lisamine (seederid)
